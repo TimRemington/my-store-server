@@ -1,6 +1,6 @@
-const express = require(‘express’)
-const morgan = require(‘morgan’)
-const cors = require(‘cors’)
+const express = require('express')
+const morgan = require('morgan')
+const cors = require('cors')
 
 const PORT = process.env.PORT || 4000
 
@@ -8,15 +8,15 @@ const app = express()
 
 // Middleware
 app.use(cors())
-app.use(morgan(‘dev’))
+app.use(morgan('dev'))
 
 // Router Files
 
 
 // Routes
-app.get(‘/api/test’, (req, res, next) => {
+app.get('/api/test', (req, res, next) => {
      res.json({
-	Message: ‘Route working’
+	message: 'Route working'
      })
      // const error = new Error(“it died”)
      // next(error)
