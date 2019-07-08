@@ -18,7 +18,7 @@ app.get('/api/test', (req, res, next) => {
      res.json({
 	message: 'Route working'
      })
-     // const error = new Error(“it died”)
+     // const error = new Error('it died')
      // next(error)
 })
 
