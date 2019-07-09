@@ -30,8 +30,14 @@ module.exports = {
         type: Sequelize.DATE,
         defaultValue: new Date()
       },
-      category_id: {
-        
+      categoryId: {
+        type: Sequelize.INTEGER,
+        references: {
+          model: 'Categories',  // This is the name of the table
+          key: 'id',
+          as: 'category_id'
+        },
+        allowNull: false
       }
     });
   },
