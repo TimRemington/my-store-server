@@ -1,7 +1,6 @@
 {
   "name": "my-store-server",
   "version": "1.0.0",
-  "description": "",
   "main": "server.js",
   "scripts": {
     "start": "nodemon server.js",
@@ -27,7 +26,11 @@
     "nodemon": "^1.19.1",
     "pg": "^7.11.0",
     "pg-hstore": "^2.3.3",
-    "sequelize": "^5.9.0",
+    "postgresql": "0.0.1",
+    "psql": "0.0.1",
+    "sequelize": "^5.9.4",
     "sequelize-cli": "^5.5.0"
-  }
+  },
+  "devDependencies": {},
+  "description": ""
 }
