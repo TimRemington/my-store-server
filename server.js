@@ -30,7 +30,7 @@ app.get('/api/categories', (req, res, next) => {
   Category.findAll()
     .then(categories => {
       res.json({
-          categories
+        categories
       })
     })
     .catch(error => {
