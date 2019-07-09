@@ -10,6 +10,10 @@ const app = express()
 app.use(cors())
 app.use(morgan('dev'))
 
+// Sequelize models
+const db = require('./models')
+const Category = db.Category
+
 // Router Files
 
 
@@ -20,6 +24,18 @@ app.get('/api/test', (req, res, next) => {
      })
      // const error = new Error('it died')
      // next(error)
+})
+
+app.get('/api/categories', (req, res, next) => {
+  Category.findAll()
+    .then(categories => {
+      res.json({
+          categories
+      })
+    })
+    .catch(error => {
+      next(error)
+    })
 })
 
 // Error Handling
