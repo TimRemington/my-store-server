@@ -41,6 +41,20 @@ app.get('/api/categories', (req, res, next) => {
     })
 })
 
+app.get('/api/products', (req, res, next) => {
+  Product.findAll({
+    include: [{ model: Category }]
+  })
+    .then(products => {
+      res.json({
+        products
+      })
+    })
+    .catch(error => {
+      next(error)
+    })
+})
+
 // Error Handling
 //Impletement: https://github.com/justsml/guides/blob/master/express/setup-guide/app.js
 app.use(notFound)

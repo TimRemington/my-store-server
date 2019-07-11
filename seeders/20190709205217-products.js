@@ -12,7 +12,7 @@ module.exports = {
         isBetaMember: false
       }], {});
     */
-    return queryInterface.bulkInsert('Product', [
+    return queryInterface.bulkInsert('Products', [
       {
         "id": 1,
         "name": "Awesome Shirt",
@@ -72,6 +72,6 @@ module.exports = {
       Example:
       return queryInterface.bulkDelete('People', null, {});
     */
-    return queryInterface.bulkDelete('Product', null, {});
+    return queryInterface.bulkDelete('Products', null, {});
   }
 };
