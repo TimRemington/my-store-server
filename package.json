@@ -20,6 +20,7 @@
   "homepage": "https://github.com/TimRemington/my-store-server#readme",
   "dependencies": {
     "cors": "^2.8.5",
+    "dotenv": "^8.0.0",
     "express": "^4.17.1",
     "init": "^0.1.2",
     "morgan": "^1.9.1",
@@ -29,7 +30,8 @@
     "postgresql": "0.0.1",
     "psql": "0.0.1",
     "sequelize": "^5.9.4",
-    "sequelize-cli": "^5.5.0"
+    "sequelize-cli": "^5.5.0",
+    "stripe": "^7.4.0"
   },
   "devDependencies": {},
   "description": ""
