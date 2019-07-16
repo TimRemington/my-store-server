@@ -55,6 +55,22 @@ app.get('/api/products', (req, res, next) => {
     })
 })
 
+app.get('/api/products/:id', (req, res, next) => {
+  const id = req.params.id
+
+  Product.findByPk(id, {
+    include: [{ model: Category }]
+  })
+    .then(product => {
+      res.json({
+        product
+      })
+    })
+    .catch(error => {
+      console.log(error)
+    })
+})
+
 // Error Handling
 //Impletement: https://github.com/justsml/guides/blob/master/express/setup-guide/app.js
 app.use(notFound)
